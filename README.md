@@ -5,7 +5,7 @@ Problem with maintaining open web-socket connection, due to version issue, so we
 MOdal forms:
 Whenever a new obj was created for qualification, we required a reference for faculty. We did that by overriding the get_form_kwargs of BSModal, fetched the  faculty id from url and passed it to form. In form, we override the __init__ method of MODALFORM. We retrieved the faculty object using the facukty id, and initialized the faculty field using this faculty object. Now, to hide the faculty id in form, we used widget and hid the id label and input.
 AUTO FACULTY ID GENERATION:
-Generally, when admin registers a faculty, the data is saved using save_modal method. Now, to autogenerate and insert faculty id, we overrid the save_modal method of model_admin class. We used current year, details saved in obj for department and count from number of faulties in departmentand initialized the obj.facultyid and called super().
+Generally, when admin registers a faculty, the data is saved using save_model method. Now, to autogenerate and insert faculty id, we overrid the save_modal method of model_admin class. We used current year, details saved in obj for department and count from number of faulties in departmentand initialized the obj.facultyid and called super().
 OTP:
 OTP generation using twilio.
 
